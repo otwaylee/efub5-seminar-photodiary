@@ -7,6 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
   max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
@@ -21,7 +22,7 @@ function App() {
   const [posts, setPosts] = useState([]);
 
   const handleUpload = (post) => {
-    setPosts((prev) => [post, ...prev]);
+    // TODO: 업로드된 post를 상태에 추가하는 로직을 작성해보세요
   };
 
   return (

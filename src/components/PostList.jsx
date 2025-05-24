@@ -23,12 +23,8 @@ const Image = styled.img`
 export default function PostList({ posts }) {
   return (
     <PostContainer>
-      {posts.map((post, i) => (
-        <Post key={i}>
-          <h3>{post.title}</h3>
-          <Image src={post.imageUrl} alt='업로드 이미지' />
-        </Post>
-      ))}
+      {/* TODO: posts 배열을 순회하며 Post 항목을 렌더링해보세요 */}
+      {/* 어떤 함수를 사용해볼까요? ___ 함수를 사용해서 각 post의 title과 imageUrl을 꺼내 렌더링하세요. */}
     </PostContainer>
   );
 }

@@ -26,30 +26,15 @@ export default function UploadForm({ onUpload }) {
   const [preview, setPreview] = useState(null);
 
   const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setPreview(URL.createObjectURL(file));
-    }
+    // TODO: 선택한 파일을 미리보기로 보여주는 코드를 작성해보세요
+    //* 힌트: URL.createObjectURL(file)을 사용하면 브라우저에서 임시 미리보기 URL을 만들 수 있어요
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const file = fileRef.current.files[0];
-    const title = titleRef.current.value;
-    if (!file || !title) return;
-
-    const formData = new FormData();
-    formData.append('title', title);
-    formData.append('image', file);
-
-    const newPost = {
-      title,
-      imageUrl: URL.createObjectURL(file),
-    };
-
-    onUpload(newPost);
-    setPreview(null);
-    e.target.reset();
+    // TODO 제목과 이미지가 담긴 FormData를 만들고, 상위 컴포넌트(App)의 onUpload 함수에 전달해주세요
+    // *힌트: FormData에 .append()로 key-value 형식으로 데이터를 추가할 수 있어요
+    // *그리고 onUpload(newPost)로 새로운 포스트 객체를 App에 넘겨줄 수 있어요 
   };
 
   return (
